@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@android:color/darker_gray"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/darker_gray">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <com.google.android.gms.maps.MapView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/mapView"/>
+                <com.android.volley.toolbox.NetworkImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="220dp"
+                    android:id="@+id/single_property_image"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="4">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="2dp"
+                        android:layout_marginLeft="10dp"
+                        android:textSize="17dp"
+                        android:id="@+id/text_fsp_property_price"
+                        android:layout_weight="1"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="2dp"
+                    android:weightSum="5">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="2dp"
+                        android:layout_marginLeft="10dp"
+                        android:text="Price"
+                        android:layout_weight="2"/>
+
+                    <TextView
+                        android:id="@+id/text_fsp_property_beds"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Beds"
+                        android:layout_weight="1"/>
+
+                    <TextView
+                        android:id="@+id/text_fsp_property_baths"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Baths"
+                        android:layout_weight="1"/>
+
+                    <TextView
+                        android:id="@+id/text_fsp_property_cars"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Car Alown."
+                        android:layout_weight="1"/>
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <com.ramotion.foldingcell.FoldingCell
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:id="@+id/folding_cell">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/cell_content_view"
+                    android:background="@color/cardview_light_background"
+                    android:visibility="gone">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="201dp"
+                        android:orientation="vertical">
+                        <Button
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:id="@+id/button_contact_now"
+                            android:alpha="0.7"
+                            android:text="Contact Now"/>
+                        <Button
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:id="@+id/button_send_message"
+                            android:alpha="0.7"
+                            android:text="Send Message"/>
+                        <android.support.v7.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="horizontal">
+                                <com.android.volley.toolbox.NetworkImageView
+                                    android:layout_width="90dp"
+                                    android:layout_height="match_parent"
+                                    android:id="@+id/image_relevant_profile2"/>
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:orientation="vertical">
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_margin="10dp"
+                                        android:text="Relevant Person"
+                                        android:textStyle="bold"
+                                        android:textSize="17dp"/>
+                                    <TextView
+                                        android:id="@+id/text_relevant_p_name1"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:text="Relevant Person Name"
+                                        android:layout_marginLeft="10dp"
+                                        android:textSize="17dp"/>
+
+                                    <TextView
+                                        android:id="@+id/text_relevant_p_mobile1"
+                                        android:layout_marginTop="5dp"
+                                        android:layout_marginLeft="10dp"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:text="Relevant Person Phone Number"
+                                        android:textSize="17dp"/>
+                                </LinearLayout>
+                            </LinearLayout>
+                        </android.support.v7.widget.CardView>
+                    </LinearLayout>
+
+                </FrameLayout>
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/cell_title_view">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:background="@android:color/holo_blue_dark"/>
+                    <android.support.v7.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <com.android.volley.toolbox.NetworkImageView
+                                android:layout_width="90dp"
+                                android:layout_margin="5dp"
+                                android:layout_height="match_parent"
+                                android:id="@+id/image_relevant_profile1"/>
+
+                            <LinearLayout
+                                android:orientation="vertical"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="10dp"
+                                    android:text="Relevant Person"
+                                    android:textStyle="bold"
+                                    android:textSize="17dp"/>
+
+                                <TextView
+                                    android:id="@+id/text_relevant_p_name2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Relevant Person Name"
+                                    android:layout_marginLeft="10dp"
+                                    android:textSize="17dp"/>
+
+                                <TextView
+                                    android:id="@+id/text_relevant_p_mobile2"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Relevant Person Phone Number"
+                                    android:textSize="17dp"/>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </android.support.v7.widget.CardView>
+                </FrameLayout>
+
+            </com.ramotion.foldingcell.FoldingCell>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:text="Address Box"
+                        android:id="@+id/text_fsp_property_address"/>
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+</android.support.v7.widget.CardView>
