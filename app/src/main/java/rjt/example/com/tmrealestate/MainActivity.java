@@ -61,6 +61,11 @@ public class MainActivity extends AppCompatActivity implements DisplayPropertyFr
     }
 
     @Override
+    protected void onResume() {
+        super.onResume();
+    }
+
+    @Override
     public void textToRelevantPerson(String prov_mobile) {
 
     }
